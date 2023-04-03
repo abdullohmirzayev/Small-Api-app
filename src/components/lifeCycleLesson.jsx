@@ -1,18 +1,28 @@
 import { Component } from "react";
 
+
 class LifeCycleLesson extends Component {
 
-    constructor(props) {
-        super(props)
-        console.log('working');
+    state = { 
+        user: []
     }
-
-    state = {  } 
+     
+    componentDidMount() {
+        fetch('https://jsonplaceholder.typicode.com/users')
+        .then((response) => response.json())
+        .then(data => {
+            console.log(data);
+            this.setState({user: data})
+        })
+    }
+    
     render() { 
         return (
-            <div>
-                hi
-            </div>
+            <>
+                {/* <Container>
+                    <Row></Row>
+                </Container>    */}
+            </>
         );
     }
 }
