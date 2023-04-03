@@ -1,15 +1,8 @@
 *{
   margin: 0;
   padding: 0;
-  background: #000;
-  color: #ffffff;
 }
 
-::selection {
-  background: #fff;
-  color: #000;
-}
-
-.App {
+/* .App {
   text-align: center;
-}
+} */
